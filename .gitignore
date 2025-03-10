@@ -1,0 +1,150 @@
+# =====================================
+# OS-Specific Files
+# =====================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+
+# Linux
+# (Linux generally doesn’t create hidden system files that
+# we need to ignore, but you might see these in some distros)
+.cache
+*.swp
+*~
+
+# =====================================
+# General Java
+# =====================================
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.iml
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Generated files
+gen/
+out/
+bin/
+
+# =====================================
+# Maven
+# =====================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+# Maven wrapper
+.mvn/
+mvnw
+mvnw.cmd
+
+# =====================================
+# Gradle
+# =====================================
+.gradle/
+build/
+**/build/
+!gradle-wrapper.jar   # if you want to keep Gradle wrapper JAR in source control
+gradle-app.setting
+
+
+# =====================================
+# Eclipse
+# =====================================
+.project
+.classpath
+.settings/
+# Eclipse Core files
+*.launch
+# Eclipse Code Style
+.codetemplates
+.factorypath
+
+# =====================================
+# IntelliJ IDEA
+# =====================================
+# Ignore project files and build output
+.idea/
+*.iws
+*.ipr
+*.iml
+out/
+# Auto-generated files
+*.sw?
+# IntelliJ Gradle caches
+.gradle/
+
+# =====================================
+# NetBeans
+# =====================================
+nbproject/
+nbbuild/
+build/
+dist/
+.nb-gradle/
+
+# =====================================
+# VS Code
+# =====================================
+.vscode/
+.history/
+
+# =====================================
+# Other
+# =====================================
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.bk
+*.orig
+*.old
+*.rej
+
+# Generated patches
+*.diff
+
+# =====================================
+# Logs / Reports
+# =====================================
+*.log
+*.log.*
+log/
+logs/
+test-results/
+
+# Coverage / Test Reports
+coverage/
+*.lcov
+*.clover
+jacoco.exec
+jacoco-report/
+reports/
+
+# =====================================
+# Ignore any local private config
+# =====================================
+.env
+.env.*
+.secret
+
+
+# Generated database file
+uml-data.db

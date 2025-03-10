@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'io.freefair.lombok' version '8.0.1'
+
+}
+
+group 'edu.vt.cs.lapsum'
+version '1.0'
+
+// Specify the Java version you want to use:
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JavaParser
+    implementation 'com.github.javaparser:javaparser-core:3.26.3'
+    
+    
+    // SQLite JDBC driver
+    implementation 'org.xerial:sqlite-jdbc:3.49.1.0'
+    
+    // Example testing dependency (optional)
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+application {
+    // Replace with the fully qualified class name of your main class
+    mainClass = 'edu.vt.cs.lapsum.JavaUMLExtractor'
+}
+
+// Use JUnit Platform for tests (if you're writing tests)
+tasks.test {
+    useJUnitPlatform()
+}
