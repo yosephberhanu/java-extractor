@@ -1,5 +1,7 @@
 package edu.vt.cs.lapsum.sink;
 
+import java.sql.SQLException;
+
 import edu.vt.cs.lapsum.models.*;
 
 public interface Sink {
@@ -7,7 +9,7 @@ public interface Sink {
 
     public void insertUMLProperty(long classId, UMLProperty prop);
 
-    public long insertUMLMethod(long classId, UMLMethod method);
+    public long insertUMLMethod(long classId, UMLMethod method); 
 
-    public void insertUMLParameter(long methodId, UMLParameter param);    
+    public void insertUMLParameter(long methodId, UMLParameter param);
 }

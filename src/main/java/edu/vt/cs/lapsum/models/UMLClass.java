@@ -1,15 +1,12 @@
 package edu.vt.cs.lapsum.models;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
+import lombok.*;
+import java.util.*;
 
 @Data
-@NoArgsConstructor
-public class UMLClass {
-    private String name;
-    private String packageName;
+@EqualsAndHashCode(callSuper = true)
+public class UMLClass extends UMLItem {
+    private Optional<String> packageName = Optional.empty();
     private boolean isAbstract;
     private boolean isInterface;
     private List<String> annotations = new ArrayList<>();
@@ -17,11 +14,4 @@ public class UMLClass {
 
     private List<UMLProperty> properties = new ArrayList<>();
     private List<UMLMethod> methods = new ArrayList<>();
-
-    public UMLClass(String name, String packageName, boolean isAbstract, boolean isInterface) {
-        this.name = name;
-        this.packageName = packageName;
-        this.isAbstract = isAbstract;
-        this.isInterface = isInterface;
-    }
 }

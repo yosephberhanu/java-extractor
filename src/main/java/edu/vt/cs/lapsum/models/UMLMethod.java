@@ -1,19 +1,20 @@
 package edu.vt.cs.lapsum.models;
 import lombok.Data;
-import java.util.ArrayList;
-import java.util.List;
+import lombok.EqualsAndHashCode;
+
+import java.util.*;
 
 @Data
-public class UMLMethod {
-    private String name;
+@EqualsAndHashCode(callSuper = true)
+public class UMLMethod extends UMLItem{
     private String returnType;
     private String visibility;
     private boolean isStatic;
     private boolean isAbstract;
-    private int startLine;
-    private int endLine;
+    private Optional<Integer> startingLine = Optional.empty();
+    private Optional<Integer> endingLine = Optional.empty();
 
     private List<UMLParameter> parameters = new ArrayList<>();
     private List<String> annotations = new ArrayList<>();
-
+    private Optional<String> source;
 }

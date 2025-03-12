@@ -1,24 +1,18 @@
 package edu.vt.cs.lapsum.models;
+import java.util.List;
+import java.util.Optional;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
 
 @Data
-@NoArgsConstructor
-public class UMLProperty {
-    private String name;
+@EqualsAndHashCode(callSuper = true)
+public class UMLProperty extends UMLItem{
     private String dataType;
     private String visibility;
     private boolean isStatic;
     private boolean isFinal;
-    private int lineNumber; // optional
+    private List<String> annotations;
+    private Optional<Integer> sourceLine = Optional.empty();
 
-    public UMLProperty(String name, String dataType, String visibility, 
-                       boolean isStatic, boolean isFinal, int lineNumber) {
-        this.name = name;
-        this.dataType = dataType;
-        this.visibility = visibility;
-        this.isStatic = isStatic;
-        this.isFinal = isFinal;
-        this.lineNumber = lineNumber;
-    }
 }

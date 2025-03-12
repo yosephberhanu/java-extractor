@@ -22,7 +22,7 @@ dependencies {
     // JavaParser
     implementation 'com.github.javaparser:javaparser-core:3.26.3'
     
-    
+    implementation 'com.google.code.gson:gson:2.10.1'
     // SQLite JDBC driver
     implementation 'org.xerial:sqlite-jdbc:3.49.1.0'
     

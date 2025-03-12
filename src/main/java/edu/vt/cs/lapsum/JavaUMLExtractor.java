@@ -27,9 +27,9 @@ public class JavaUMLExtractor {
         
         for (Path javaFile : allJavaFiles) {
             try {
-                parser.parseAndInsert(javaFile);
+                parser.parseAndInsert(javaFile, Paths.get(projectFolder));
             } catch (Exception e) {
-                System.err.println("Warning: Could not parse file: " + javaFile + " due to " + e);
+                System.err.println("Warning: Could not parse file: " + javaFile + " due to " + e.fillInStackTrace());
             }
         }
         System.out.println("Extraction complete.");
